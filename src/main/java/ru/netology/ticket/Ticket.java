@@ -20,6 +20,10 @@ public class Ticket implements Comparable<Ticket> {
     return id;
   }
 
+  public int getPriceTicket() {
+    return priceTicket;
+  }
+
   public String getAirportDeparture() {
     return airportDeparture;
   }
@@ -33,7 +37,7 @@ public class Ticket implements Comparable<Ticket> {
   }
 
   @Override
-  public int compareTo(Ticket otherTicket) {
-    return Integer.compare(priceTicket, otherTicket.priceTicket);
+  public int compareTo(Ticket o) {
+    return priceTicket - o.getPriceTicket();
   }
 }
